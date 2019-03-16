@@ -25,7 +25,7 @@ def measure(state, basis):
     
     """
     
-    rho = np.dot(state, state.T)
+    rho = np.dot(state, state.conjugate().T)
 
     P = np.dot(basis, basis.T)
     n = int(rho.shape[1] / P.shape[0])
